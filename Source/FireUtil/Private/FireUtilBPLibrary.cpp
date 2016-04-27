@@ -14,7 +14,7 @@ float UFireUtilBPLibrary::FireUtilSampleFunction(float Param)
 	return -1;
 }
 
-void UFireUtilBPLibrary::TraceVectorLength(USceneComponent* Object, EAxis::Type myAxis, float length, FVector& OutStart, FVector& OutEnd)
+void UFireUtilBPLibrary::TraceVectorLengthAxis(USceneComponent* Object, EAxis::Type myAxis, float length, FVector& OutStart, FVector& OutEnd)
 {
 	// Calculate draw 
 	FVector Start = Object->GetComponentLocation();
@@ -40,5 +40,15 @@ void UFireUtilBPLibrary::TraceVectorLength(USceneComponent* Object, EAxis::Type 
 
 	OutStart = Start;
 	OutEnd = EndPoint;
+}
+
+void UFireUtilBPLibrary::TraceVectorLengthVector(USceneComponent * Object, FVector Trace, float length, FVector & OutStart, FVector & OutEnd)
+{
+	FVector Start = Object->GetComponentLocation();
+	Trace.Normalize();
+	OutEnd = Start + (Trace * length);
+
+	OutStart = Start;
+	//OutEnd = EndPoint;
 }
 

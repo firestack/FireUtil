@@ -30,7 +30,10 @@ class UFireUtilBPLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "FireUtil sample test testing"), Category = "FireUtilTesting")
 	static float FireUtilSampleFunction(float Param);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, category = "MOBUtil")
-	static void TraceVectorLength(USceneComponent* Object, EAxis::Type myAxis, float length, FVector& Start, FVector& End);
+	UFUNCTION(BlueprintCallable, BlueprintPure, category = "FIREUtil")
+	static void TraceVectorLengthAxis(USceneComponent* Object, EAxis::Type myAxis, float length, FVector& OutStart, FVector& OutEnd);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, category = "FIREUtil")
+	static void TraceVectorLengthVector(USceneComponent* Object, FVector Trace, float length, FVector& OutStart, FVector& OutEnd);
 
 };
