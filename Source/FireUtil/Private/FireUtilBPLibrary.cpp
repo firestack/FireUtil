@@ -9,11 +9,6 @@ UFireUtilBPLibrary::UFireUtilBPLibrary(const FObjectInitializer& ObjectInitializ
 
 }
 
-float UFireUtilBPLibrary::FireUtilSampleFunction(float Param)
-{
-	return -1;
-}
-
 void UFireUtilBPLibrary::TraceVectorLengthAxis(USceneComponent* Object, EAxis::Type myAxis, float length, FVector& OutStart, FVector& OutEnd)
 {
 	// Calculate draw 

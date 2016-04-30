@@ -29,7 +29,7 @@ public class FireUtil : ModuleRules
 			new string[]
 			{
 				"Core",
-				
+
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -42,6 +42,9 @@ public class FireUtil : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "RenderCore",
+                "ShaderCore",
+                "RHI"
 
 				// ... add private dependencies that you statically link with here ...	
 			}

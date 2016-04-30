@@ -23,12 +23,9 @@
 *	https://wiki.unrealengine.com/Custom_Blueprint_Node_Creation
 */
 UCLASS()
-class UFireUtilBPLibrary : public UBlueprintFunctionLibrary
+class FIREUTIL_API UFireUtilBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
-
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "FireUtil sample test testing"), Category = "FireUtilTesting")
-	static float FireUtilSampleFunction(float Param);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, category = "FIREUtil")
 	static void TraceVectorLengthAxis(USceneComponent* Object, EAxis::Type myAxis, float length, FVector& OutStart, FVector& OutEnd);
