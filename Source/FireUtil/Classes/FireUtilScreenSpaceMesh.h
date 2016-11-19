@@ -6,7 +6,7 @@
 UCLASS()
 class FIREUTIL_API UScreenSpaceMeshComponent : public UMeshComponent
 {
-	GENERATED_BODY()
+	GENERATED_BODY() 
 public:
 
 };
